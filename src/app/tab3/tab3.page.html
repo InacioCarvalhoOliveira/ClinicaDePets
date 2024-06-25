@@ -1,17 +1,36 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title>Disponibilidade de Serviço</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding"> 
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of profissionais">
+      <ion-item>
+        <ion-icon slot="start" name="person"></ion-icon>
+        <ion-text>
+          <h3>Dr(a). {{item.nome}}</h3>
+          <p>
+            Gênero: {{item.genero}}
+            <br> 
+            Data de Nascimento: {{item.datanasc | date}}
+          </p>
+          <p>Localidade de atendimento: {{item.cidade}}-{{item.estado}}</p>
+        </ion-text>
+      </ion-item>
+      <ion-item-options>
+        <ion-item-option color="primary" (click)="detail(item)"> Detalhes</ion-item-option>
+        <ion-item-option color="success" (click)="editar()"> Editar</ion-item-option>
+        <ion-item-option color="danger" (click)="deletar(item)">Deletar</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    <br>
+  </ion-list>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button size="small" [routerLink]="['./psicologo-create']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

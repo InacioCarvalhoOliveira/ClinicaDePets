@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: Tab3Page,
+  },
+  {
+    path: 'psicologo-create',
+    loadChildren: () => import('./psicologo-create/psicologo-create.module').then( m => m.PsicologoCreatePageModule)
   }
 ];
 

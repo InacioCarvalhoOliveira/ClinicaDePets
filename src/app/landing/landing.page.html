@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Clínica de Pets
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="card-container">
+    <ion-card>
+      <ion-row>
+        <ion-col size-md="3" size="12" class="ion-padding ion-blue-bkg">
+          <ion-img src="./assets/img/cat2.png" alt="cat logo" loading="lazy"></ion-img>
+        </ion-col>
+        <ion-col size-md="9" size="12" class="welcome">
+          <ion-card-header>
+            <ion-card-title> Bem-vindo à Clínica de Pets </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button [routerLink]="['/auth/login']" shape="round" color="primary"> Entrar </ion-button>
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+</ion-content>

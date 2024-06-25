@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Dados do Usuário</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Nome: {{userDetails.name}} {{userDetails.sobrenome}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Email: {{userDetails.email}} </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Genero: {{userDetails.sexo}} </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label [routerLink]="['/landing']" color="danger" fill="clear">Sair</ion-label>
+        </ion-item>  
+        
+  
+        <!-- Adicione outros campos conforme necessário -->
+      </ion-card-content>
+    </ion-card>
+  </ion-content>

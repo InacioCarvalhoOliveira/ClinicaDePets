@@ -1,17 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Agendar Consulta
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-list class="ion-justify-content-center">
+    <ion-item>
+      <ion-label>Data do agendamento</ion-label>
+      <ion-input type="date" [(ngModel)]="dataAgendamento"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Hora da consulta:</ion-label>
+      <ion-input type="time" [(ngModel)]="horaAgendamento" style="color: black;"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Especialista</ion-label>
+      <ion-select placeholder="Selecione o Profissional" [(ngModel)]="nomeDoutor">
+        <ion-select-option *ngFor="let profissional of profissionais" [value]="profissional.nome">
+          Dr. {{profissional.nome}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button (click)="save()" expand="block" color="success" class="ion-padding">Agendar</ion-button>
+    <br>
+
+  </ion-list>
+
 </ion-content>

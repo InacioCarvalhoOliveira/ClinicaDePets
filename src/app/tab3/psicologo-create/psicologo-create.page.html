@@ -1,0 +1,91 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Agendar Consulta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding"> 
+  <h4 class="form-title">Preencha todos os Campos do Formulario</h4>
+  <br>
+  
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="floating">Nome Completo</ion-label>
+      <ion-input [(ngModel)]="nome"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="form-group">
+    <ion-item>
+      <ion-label>Data de Nascimento</ion-label>
+      <ion-input type="date" [(ngModel)]="datanasc"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="form-group">
+    <ion-item>
+      <ion-label>Gênero</ion-label>
+      <ion-select placeholder="Selecione o Gênero" [(ngModel)]="genero">
+        <ion-select-option value="masculino">Masculino</ion-select-option>
+        <ion-select-option value="feminino">Feminino</ion-select-option>
+        <ion-select-option value="outro">Outro</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+
+  <br>
+  <h3 class="section-title">Localidade de Atendimento</h3>
+  <br>
+
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="floating">CEP</ion-label>
+      <ion-input [(ngModel)]="cep" (ionBlur)="callAPI()" placeholder="Digite seu CEP"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="floating">Endereço</ion-label>
+      <ion-input [(ngModel)]="endereco"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="floating">Número</ion-label>
+      <ion-input type="number" [(ngModel)]="numero"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="floating">Complemento</ion-label>
+      <ion-input [(ngModel)]="complemento"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="floating">Bairro</ion-label>
+      <ion-input [(ngModel)]="bairro"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="floating">Cidade</ion-label>
+      <ion-input [(ngModel)]="cidade"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="floating">Estado</ion-label>
+      <ion-input [(ngModel)]="estado"></ion-input>
+    </ion-item>
+  </div>
+
+  <br>
+  <ion-button expand="block" (click)="save()" color="success">Cadastrar</ion-button>
+</ion-content>
