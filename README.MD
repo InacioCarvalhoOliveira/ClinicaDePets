@@ -1,6 +1,10 @@
 ## Projeto Utilizando Ionic 7.2 + Node 21.7.1 + Angular
 
+
 encontrei alguns exemplos para me basear em meu projeto de uma **Clinica de Câes e Gatos chamado 'Clínca de Pets'**
+
+projeto final link : clinicapets-bc60c.web.app/
+
 Sites analisados:
 
 Nacionais:
