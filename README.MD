@@ -3,7 +3,7 @@
 
 encontrei alguns exemplos para me basear em meu projeto de uma **Clinica de Câes e Gatos chamado 'Clínca de Pets'**
 
-projeto final link : clinicapets-bc60c.web.app/
+projeto final link : https://clinicapets-bc60c.web.app/
 
 Sites analisados:
 
